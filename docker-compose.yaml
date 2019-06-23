@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+        logstash:
+                image: docker pull docker.elastic.co/logstash/logstash-oss:7.1.1
+                ports:
+                    - 5044:5044
+                    - 9600:9600
+                volumes:
+                    - ./config:/config 
